@@ -1,6 +1,6 @@
 Sure, here's an example README file you can use:
 
-# Email Header Splitter
+# Email Syntax Splitter
 
 This is a simple script written in JavaScript and Bootstrap 5 that allows you to split an email header by boundary. This script was created by Reda Es-snoussi.
 
