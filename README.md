@@ -56,4 +56,4 @@ This script is licensed under the [MIT License](LICENSE).
 
 ## Author
 
-This script was created by Reda Es-snoussi. You can contact the author at <reda@example.com>.
+This script was created by Reda Es-snoussi. You can contact the author at <reda.essnoussi95@gmail.com>.
