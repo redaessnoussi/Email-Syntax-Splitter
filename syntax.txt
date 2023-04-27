@@ -1,0 +1,56 @@
+Delivered-To: redavan95@gmail.com
+Received: by 2002:a05:7412:98c3:b0:cc:9b29:251e with SMTP id kc3csp483509rdb;
+        Thu, 27 Apr 2023 07:05:37 -0700 (PDT)
+X-Google-Smtp-Source: ACHHUZ5M4TqlT88zFzFlxi1bHnevvDb8PpdBQsYbMHrP3vqort7p3s2JgJkxn141KMIP5v+VVN/B
+X-Received: by 2002:a05:622a:1891:b0:3ef:499a:dd99 with SMTP id v17-20020a05622a189100b003ef499add99mr2510506qtc.66.1682604337339;
+        Thu, 27 Apr 2023 07:05:37 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1682604337; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Va6JhAcchd1IThftqAp6a0Sf9Y7TEQ6MMYdDzSOC50hvDTP9TPf0WTNN2APG5DLkBE
+         ZLvYGxtSDVt3deD+nADNOAbRBDPGhdPOs1sB8Giy/RF9pXjrU6u0kWZgkExpHtoT1jrp
+         fbhOaVOUC1XWzUUOqiwAeXkhEdUchtnxJG5hsT8Y/MhxbBDrKwpOk4V7JK3IPqH6PJ8x
+         d+TPgH6JdWnCaK2XxzMfw6IH2l19Q6ELTUE+g+dYWHqAChKKviFt7Uljsam0nPOO8GT8
+         +tDxbc3I/jlpeMW+OCmAvixElNYapQQaF5o4VAJ5227NNudpspF7jWT+/Sz5sFlscRA6
+         Vb4A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:list-unsubscribe-post:list-unsubscribe:feedback-id
+         :content-transfer-encoding:mime-version:date:subject:reply-to:from
+         :to:dkim-signature:dkim-signature;
+        bh=39h5fa3EDjLpC4RAelxtujGNRztersEBrS2MGd2vCo4=;
+        b=cIM+7HhLYUCSQi78IYYw49llV0EQTKlEF5p5S1V6mJ6VrOsZupGBy+YX9SFKWZZgkB
+         7YF0q13UzK97X0GF9Ko4ljbaEqfcXLCP+HTbnX3jX7zHXFO3WeYhV5Hfj37MTxeUZkji
+         7StC/CPE2rJ/p8yoUmfzqggRHOoO1YQFYknNjXWw4jvq6Lc//XSBfOkhPpmvd4lA02Fr
+         LSQltspMLc0FC0hK6kb3O7srfGwdSSIHbOG6hMgSjUx2vGrk1QnFgGys5tvx/nQwCLUq
+         YsXPYK58RagCT1GXp7K2vQGd/imQH8JXL7+VOCH8oglvatuPiCr02v17l9arVagUHEst
+         6tRg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@boxward.com header.s=dk header.b=TpokI9B6;
+       dkim=pass header.i=@acems1.com header.s=dk header.b=ltClvFee;
+       spf=pass (google.com: domain of bounce-152366-1912-45400-redavan95=gmail.com@d31a.emsend3.com designates 52.128.42.100 as permitted sender) smtp.mailfrom="bounce-152366-1912-45400-redavan95=gmail.com@d31a.emsend3.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=boxward.com
+Return-Path: <bounce-152366-1912-45400-redavan95=gmail.com@d31a.emsend3.com>
+Received: from d31a.emsend3.com (d31a.emsend3.com. [52.128.42.100])
+        by mx.google.com with ESMTPS id z19-20020a05622a061300b003e4d481aceesi12356131qta.78.2023.04.27.07.05.37
+        for <redavan95@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Thu, 27 Apr 2023 07:05:37 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-152366-1912-45400-redavan95=gmail.com@d31a.emsend3.com designates 52.128.42.100 as permitted sender) client-ip=52.128.42.100;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@boxward.com header.s=dk header.b=TpokI9B6;
+       dkim=pass header.i=@acems1.com header.s=dk header.b=ltClvFee;
+       spf=pass (google.com: domain of bounce-152366-1912-45400-redavan95=gmail.com@d31a.emsend3.com designates 52.128.42.100 as permitted sender) smtp.mailfrom="bounce-152366-1912-45400-redavan95=gmail.com@d31a.emsend3.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=boxward.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk; d=boxward.com; h=To:From:Reply-To:Subject:Date:MIME-Version:Content-Type: Content-Transfer-Encoding:List-Unsubscribe:List-Unsubscribe-Post:Message-ID; i=andy@boxward.com; bh=39h5fa3EDjLpC4RAelxtujGNRztersEBrS2MGd2vCo4=; b=TpokI9B6/WcWGU5VZuHt8dZSqMvmxpZCM0qKOHm9xxOZmM51SQkxyL8aWzbm+QmyOAUUKRYOIMjR
+   DU4zNc7DEa0kbAP1xWHmZbLt02EIOn4gh8NiuhtTU5JXRfJSGzDtWcFNbPcHQ1QM9oonoOXr+DAe
+   rhbyc+31b8XDhZUTKUg=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk; d=acems1.com; h=To:From:Reply-To:Subject:Date:MIME-Version:Content-Type: Content-Transfer-Encoding:List-Unsubscribe:List-Unsubscribe-Post:Message-ID; bh=39h5fa3EDjLpC4RAelxtujGNRztersEBrS2MGd2vCo4=; b=ltClvFeePlCyVG3+mLa4h5FhGlB0PNp8hReCf1TpaL4ehABE/UvzRy0zwq5he9ujFJdqb3VVhjhI
+   YpQN+OhR2rr8asu7BArOCD7jeGjiZYqh9AZwOVfGHIraXlmhCARr+Z7nDv3OXzirMkbhvaa6IhtG
+   xJkMvjmSQE5sHFv8pRE=
+Received: by d31a.emsend3.com id h9a0j230sfob for <redavan95@gmail.com>; Thu, 27 Apr 2023 14:05:07 +0000 (envelope-from <bounce-152366-1912-45400-redavan95=gmail.com@d31a.emsend3.com>)
+X-Mailer: ActiveCampaign Mailer
+To: Alex Kenji <redavan95@gmail.com>
+From: Andy Cabasso <andy@boxward.com>
+Reply-To: reply-offsprout.activehosted.1912.5091.45400@d31a.emsend3.com
+Subject: How many emails should I have warming up?
+Date: Thu, 27 Apr 2023 09:04:36 -0500
+MIME-Version: 1.0
