@@ -1,9 +1,20 @@
-// let header =
-//   "Delivered-To: johndoe@example.com\r\nReceived: from mail.example.com (mail.example.com [192.0.2.1]) by mx.example.com with ESMTPS id abcdefghijklmnopqrstuvwxyz for <janedoe@example.com> (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128); Wed, 27 Apr 2023 12:34:56 -0700 (PDT) ARC-Seal: i=1; a=rsa-sha256; s=arcselector.example.com; d=microsoft.com; cv=none;... Return-Path: <bounce@example.com>";
+// function addHtmlBeforeBody(emailBody, htmlCode) {
+//   const bodyTag = "</body>";
+//   const bodyTagIndex = emailBody.lastIndexOf(bodyTag);
+//   if (bodyTagIndex !== -1) {
+//     const newEmailBody =
+//       emailBody.slice(0, bodyTagIndex) +
+//       htmlCode +
+//       emailBody.slice(bodyTagIndex);
+//     return newEmailBody;
+//   } else {
+//     console.log("Error: No </body> tag found in email body.");
+//     return emailBody;
+//   }
+// }
 
-// header = header.replace(
-//   /^Delivered-To:.*\r\n|^Received:.*\r\n|^ARC-Seal:.*\r\n|^Return-Path:.*\r\n/gm,
-//   ""
-// );
-
-// console.log(header);
+// const emailBody =
+//   "Here's some email content <body><p>This is the email body</p></body>";
+// const htmlCode = "<p>This is the added HTML code</p>";
+// const newEmailBody = addHtmlBeforeBody(emailBody, htmlCode);
+// console.log(newEmailBody);

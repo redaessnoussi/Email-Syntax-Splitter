@@ -1,56 +1,666 @@
-Delivered-To: redavan95@gmail.com
-Received: by 2002:a05:7412:98c3:b0:cc:9b29:251e with SMTP id kc3csp483509rdb;
-        Thu, 27 Apr 2023 07:05:37 -0700 (PDT)
-X-Google-Smtp-Source: ACHHUZ5M4TqlT88zFzFlxi1bHnevvDb8PpdBQsYbMHrP3vqort7p3s2JgJkxn141KMIP5v+VVN/B
-X-Received: by 2002:a05:622a:1891:b0:3ef:499a:dd99 with SMTP id v17-20020a05622a189100b003ef499add99mr2510506qtc.66.1682604337339;
-        Thu, 27 Apr 2023 07:05:37 -0700 (PDT)
-ARC-Seal: i=1; a=rsa-sha256; t=1682604337; cv=none;
-        d=google.com; s=arc-20160816;
-        b=Va6JhAcchd1IThftqAp6a0Sf9Y7TEQ6MMYdDzSOC50hvDTP9TPf0WTNN2APG5DLkBE
-         ZLvYGxtSDVt3deD+nADNOAbRBDPGhdPOs1sB8Giy/RF9pXjrU6u0kWZgkExpHtoT1jrp
-         fbhOaVOUC1XWzUUOqiwAeXkhEdUchtnxJG5hsT8Y/MhxbBDrKwpOk4V7JK3IPqH6PJ8x
-         d+TPgH6JdWnCaK2XxzMfw6IH2l19Q6ELTUE+g+dYWHqAChKKviFt7Uljsam0nPOO8GT8
-         +tDxbc3I/jlpeMW+OCmAvixElNYapQQaF5o4VAJ5227NNudpspF7jWT+/Sz5sFlscRA6
-         Vb4A==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
-        h=message-id:list-unsubscribe-post:list-unsubscribe:feedback-id
-         :content-transfer-encoding:mime-version:date:subject:reply-to:from
-         :to:dkim-signature:dkim-signature;
-        bh=39h5fa3EDjLpC4RAelxtujGNRztersEBrS2MGd2vCo4=;
-        b=cIM+7HhLYUCSQi78IYYw49llV0EQTKlEF5p5S1V6mJ6VrOsZupGBy+YX9SFKWZZgkB
-         7YF0q13UzK97X0GF9Ko4ljbaEqfcXLCP+HTbnX3jX7zHXFO3WeYhV5Hfj37MTxeUZkji
-         7StC/CPE2rJ/p8yoUmfzqggRHOoO1YQFYknNjXWw4jvq6Lc//XSBfOkhPpmvd4lA02Fr
-         LSQltspMLc0FC0hK6kb3O7srfGwdSSIHbOG6hMgSjUx2vGrk1QnFgGys5tvx/nQwCLUq
-         YsXPYK58RagCT1GXp7K2vQGd/imQH8JXL7+VOCH8oglvatuPiCr02v17l9arVagUHEst
-         6tRg==
-ARC-Authentication-Results: i=1; mx.google.com;
-       dkim=pass header.i=@boxward.com header.s=dk header.b=TpokI9B6;
-       dkim=pass header.i=@acems1.com header.s=dk header.b=ltClvFee;
-       spf=pass (google.com: domain of bounce-152366-1912-45400-redavan95=gmail.com@d31a.emsend3.com designates 52.128.42.100 as permitted sender) smtp.mailfrom="bounce-152366-1912-45400-redavan95=gmail.com@d31a.emsend3.com";
-       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=boxward.com
-Return-Path: <bounce-152366-1912-45400-redavan95=gmail.com@d31a.emsend3.com>
-Received: from d31a.emsend3.com (d31a.emsend3.com. [52.128.42.100])
-        by mx.google.com with ESMTPS id z19-20020a05622a061300b003e4d481aceesi12356131qta.78.2023.04.27.07.05.37
-        for <redavan95@gmail.com>
-        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
-        Thu, 27 Apr 2023 07:05:37 -0700 (PDT)
-Received-SPF: pass (google.com: domain of bounce-152366-1912-45400-redavan95=gmail.com@d31a.emsend3.com designates 52.128.42.100 as permitted sender) client-ip=52.128.42.100;
-Authentication-Results: mx.google.com;
-       dkim=pass header.i=@boxward.com header.s=dk header.b=TpokI9B6;
-       dkim=pass header.i=@acems1.com header.s=dk header.b=ltClvFee;
-       spf=pass (google.com: domain of bounce-152366-1912-45400-redavan95=gmail.com@d31a.emsend3.com designates 52.128.42.100 as permitted sender) smtp.mailfrom="bounce-152366-1912-45400-redavan95=gmail.com@d31a.emsend3.com";
-       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=boxward.com
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk; d=boxward.com; h=To:From:Reply-To:Subject:Date:MIME-Version:Content-Type: Content-Transfer-Encoding:List-Unsubscribe:List-Unsubscribe-Post:Message-ID; i=andy@boxward.com; bh=39h5fa3EDjLpC4RAelxtujGNRztersEBrS2MGd2vCo4=; b=TpokI9B6/WcWGU5VZuHt8dZSqMvmxpZCM0qKOHm9xxOZmM51SQkxyL8aWzbm+QmyOAUUKRYOIMjR
-   DU4zNc7DEa0kbAP1xWHmZbLt02EIOn4gh8NiuhtTU5JXRfJSGzDtWcFNbPcHQ1QM9oonoOXr+DAe
-   rhbyc+31b8XDhZUTKUg=
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk; d=acems1.com; h=To:From:Reply-To:Subject:Date:MIME-Version:Content-Type: Content-Transfer-Encoding:List-Unsubscribe:List-Unsubscribe-Post:Message-ID; bh=39h5fa3EDjLpC4RAelxtujGNRztersEBrS2MGd2vCo4=; b=ltClvFeePlCyVG3+mLa4h5FhGlB0PNp8hReCf1TpaL4ehABE/UvzRy0zwq5he9ujFJdqb3VVhjhI
-   YpQN+OhR2rr8asu7BArOCD7jeGjiZYqh9AZwOVfGHIraXlmhCARr+Z7nDv3OXzirMkbhvaa6IhtG
-   xJkMvjmSQE5sHFv8pRE=
-Received: by d31a.emsend3.com id h9a0j230sfob for <redavan95@gmail.com>; Thu, 27 Apr 2023 14:05:07 +0000 (envelope-from <bounce-152366-1912-45400-redavan95=gmail.com@d31a.emsend3.com>)
-X-Mailer: ActiveCampaign Mailer
-To: Alex Kenji <redavan95@gmail.com>
-From: Andy Cabasso <andy@boxward.com>
-Reply-To: reply-offsprout.activehosted.1912.5091.45400@d31a.emsend3.com
-Subject: How many emails should I have warming up?
-Date: Thu, 27 Apr 2023 09:04:36 -0500
-MIME-Version: 1.0
+Return-Path: <bounces+5940854-c350-redavan95=gmail.com@abmail.mail.wirexapp.com>
+Content-Type: multipart/alternative; boundary=30020cd782d8d553ecf715cf853b708c2cbf8f806b9dd7fdc274d434c005
+Date: Sat, 22 Apr 2023 01:08:10 +0000 (UTC)
+From: Team Wirex <noreply@mail.wirexapp.com>
+Mime-Version: 1.0
+Message-ID: <RG8DUmUER0qXtgs5d5wDqw@geopod-ismtpd-11>
+Subject: BTC price is $27260.14
+Reply-To: noreply@mail.wirexapp.com
+X-Feedback-ID: 5940854:SG
+X-SG-EID: tZ5lMlOwv4qvkJKB+uUUpYuocEKDFS3T2hZXv8X9UyGvAILrVVvUEqr9YOCgVhDlT09SkxH6AUOpi5m09pcta8GWwyadxf7ySVzmptIT6Bd2zWFTc8wR3mS+Nh6c3JLxkSEWSbOu+GMtzq7OlYWeXYmFRkVuly+5fjJxXmPKcXupoz77ux0pRRkQmFzwLZIKXGP4mVreMYlC7VelAaXPP+diUps7fLtloTWy9rVCpQ1GUwNy884gScUs7uVkUu7Z
+X-SG-ID: N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi/KvUYPFb2vwyNNeBc9bJiCh27BwdCxhGO9qX9dW6S0TbUM4wEHvmHnyCNHGpS0sMz47Cnw2T/cYn8l47CTP2jXzkLPoxc02iWtHX7E/DNFAMDWKDP+B3bEETdMa2EhWuwC/fG485IgupTmmRGaLJNfr1D7z88Xi11CIQZIa+4Vvkmd2NBG4fX/ET6193vcEsFMCAf+UL76yMtLNzSvoTtJCwmmeMvn/bkHacULk7vO3gP5znu7jSh0o8w5KzaJYK8YpQPDaR/MZ3Kj9fuKZ7cxmJGQmIDywvcLAeoH6+6lGtuwW9M4cPz/TWrOHCArB/pmKML9m+GIP+ej6r2UyCPVBRH6WRqLGW2WnyY3ATRwAPvNhtpc+UAGyWM5P0RQlhLaEg3BL0Byvpwc10cAowMz/gjRkzjrxeEbCF5VtEcmkczy6xjbfjHixHtwSzALD1mnLsQjQ57yw58IX7wx5enrnMQX9EZfeeJePTdEcqUqefBM/uY44XR/h9lHgPpnIXyFKJFhRxxP1uIOOj+2pp2+I
+To: redavan95@gmail.com
+X-Entity-ID: xildjxG4hnSqdi9MiHL0NQ==
+
+--30020cd782d8d553ecf715cf853b708c2cbf8f806b9dd7fdc274d434c005
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+wirex logo
+
+
+
+
+
+Today's
+Bitcoin (BTC) price is
+$27260.14
+
+Buy Now=20
+( http://ablinks.mail.wirexapp.com/ls/click?upn=3DNNfDklBYPW4P8QwJoaOnY51qq=
+BI455Q7btfF1YqXkzHSldzgNTVyOqkdvke4p-2F1-2BnuWsQldA19IhMkOmNQgq-2BWUhhDLB3-=
+2FMLvch1dTGRs99kERhJmWl8MUevGxc1CvzMeWodFkDBwDBPD5kxJo7-2Fag-3D-3D969r_zbK3=
+57ad4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1SNelmWGadlVWoa1WPzSlyv8GZSZ4DutQrLFNsr=
+2MHLXWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFdQ0ELACXuDmC4csi7HZb72NdGWd6gnKciahafS=
+h7smmKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B8qvBLReYIHwZmMuxzn9I3NNs7632Y3tHwgj57=
+1X-2FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZu2S92u8ww1Ds0Bcf3FJXBpXevpiNz-2FgeKVW=
+X4u4szG0iTGy470qWea1ZW7rm6M12rmgU8iVqaNwG7NvwhuPMv8dERe1i8fxHh-2FDREQ5TqdRU=
+ad11H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQnTolYMl6z-2F-2B1QAS9Oc8arzROyKQlK6lo6M=
+q4QnMi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-2BYNAZy5MMWR3jPhyq44sjBwWQA8VR8wsK-2F=
+w0nkIMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhWYwAPSoebBBO7uK3jLCHhihfZlZzgixaqsX0t-=
+2FFv-2Bzn0l91lrIEKOdDpJeHrOifSc4h2IHCYFZMggt1JA2vUlqv3zw3AEOfB0cnk1svS5z9Mt=
+-2BiSdl5QWW1SGj4U8PONLI8IEeofrO6CZJoUd7TyHgyjVrSKnWLQhGG-2BxM8EFvqIOLNvI9uw=
+7lXmFcgM2yo3bLzucEaQl9-2F3T6zAQ-3D )
+
+
+This
+price was correct at the time of sending this email.
+
+This email was sent on:  22 Apr 2023
+
+
+*****************************************************************
+How
+do I buy crypto?=20
+*****************************************************************
+
+Check out our support article
+for a step by step guide to buying with your Wirex app.
+
+Learn more=20
+( http://ablinks.mail.wirexapp.com/ls/click?upn=3DNNfDklBYPW4P8QwJoaOnYz0MJ=
+nRVdirUPC86MJWdLASWmLsMqMzqjqMIpP1wyzOa2QbrxYNTDE7TlwzAajhiz3INgfMoQXgx8onn=
+ZYHVhoRuf4OkbP0yir1r2O0jRDDXGBSF_zbK357ad4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1S=
+NelmWGadlVWoa1WPzSlyv8GZSZ4DutQrLFNsr2MHLXWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFd=
+Q0ELACXuDmC4csi7HZb72NdGWd6gnKciahafSh7smmKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B=
+8qvBLReYIHwZmMuxzn9I3NNs7632Y3tHwgj571X-2FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZ=
+u2S92u8ww1Ds0Bcf3FJXBpXevpiNz-2FgeKVWX4u4szG0iTGy470qWea1ZW7rm6M12rmgU8iVqa=
+NwG7NvwhuPMv8dERe1i8fxHh-2FDREQ5TqdRUad11H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQn=
+TolYMl6z-2F-2B1QAS9Oc8arzROyKQlK6lo6Mq4QnMi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-=
+2BYNAZy5MMWR3jPhyq44sjBwWQA8VR8wsK-2Fw0nkIMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhW=
+YwAPSoebBBO7uK3jLCHhihfZlZzgixaqsX0t-2FFv-2Bzn0l91lrIEKOdDpJeHkF1LrkWhygkk5=
+LAFbElq94-2BHUAmeD3lEzYwnESDcfh2NDAXSXeJfWIGeZMXzH2vgB8sromUv-2F4-2B1-2BQCi=
+EQpKKaYwFe5iU-2FzrlrhPDqjygQ1BYVtfEYx9jVv5SNjldg-2BIjXi-2BydTASAfPpKL7cFC2u=
+A-3D )
+
+
+facebook=20
+( http://ablinks.mail.wirexapp.com/ls/click?upn=3DNNfDklBYPW4P8QwJoaOnYzn-2=
+B9sqRgKqnDy04yW66juo4C5-2F7X9hksniN1LFoDAFxN1m2ga-2FshhAmV-2FPw55THTA-3D-3D=
+xSu__zbK357ad4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1SNelmWGadlVWoa1WPzSlyv8GZSZ4D=
+utQrLFNsr2MHLXWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFdQ0ELACXuDmC4csi7HZb72NdGWd6g=
+nKciahafSh7smmKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B8qvBLReYIHwZmMuxzn9I3NNs7632=
+Y3tHwgj571X-2FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZu2S92u8ww1Ds0Bcf3FJXBpXevpiN=
+z-2FgeKVWX4u4szG0iTGy470qWea1ZW7rm6M12rmgU8iVqaNwG7NvwhuPMv8dERe1i8fxHh-2FD=
+REQ5TqdRUad11H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQnTolYMl6z-2F-2B1QAS9Oc8arzROy=
+KQlK6lo6Mq4QnMi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-2BYNAZy5MMWR3jPhyq44sjBwWQA8=
+VR8wsK-2Fw0nkIMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhWYwAPSoebBBO7uK3jLCHhihfZlZzg=
+ixaqsX0t-2FFv-2Bzn0l91lrIEKOdDpJeHrzvGTECYulPkssohKkBfz3Fotc2C7onrE1802YivI=
+Ams-2BSR8BqBrRn0UTsXbK7Q3hNmBp95rkpudFXEv6RvI46mYHfnwNfMMXiaVWQlGaYMNMzzL-2=
+Bfe30lyLEHYHqtj8cPmfSczkzRhwjqlt52xZDM-3D )   twitter=20
+( http://ablinks.mail.wirexapp.com/ls/click?upn=3DNNfDklBYPW4P8QwJoaOnY6aA0=
+-2Bpb8sF-2FFWObtDtmHASXKAE9FD3FL4rPd2Gz6r3ZnTBC5TKYDeHCa-2F49P8IL-2FA-3D-3D=
+unqS_zbK357ad4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1SNelmWGadlVWoa1WPzSlyv8GZSZ4D=
+utQrLFNsr2MHLXWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFdQ0ELACXuDmC4csi7HZb72NdGWd6g=
+nKciahafSh7smmKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B8qvBLReYIHwZmMuxzn9I3NNs7632=
+Y3tHwgj571X-2FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZu2S92u8ww1Ds0Bcf3FJXBpXevpiN=
+z-2FgeKVWX4u4szG0iTGy470qWea1ZW7rm6M12rmgU8iVqaNwG7NvwhuPMv8dERe1i8fxHh-2FD=
+REQ5TqdRUad11H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQnTolYMl6z-2F-2B1QAS9Oc8arzROy=
+KQlK6lo6Mq4QnMi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-2BYNAZy5MMWR3jPhyq44sjBwWQA8=
+VR8wsK-2Fw0nkIMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhWYwAPSoebBBO7uK3jLCHhihfZlZzg=
+ixaqsX0t-2FFv-2Bzn0l91lrIEKOdDpJeHt0goL-2B-2FVTqzfwB-2BaZ1puWdDcehNWhLNTjxD=
+KWFR8-2FBbe39U2U7jCLCFajqldaPY3Hdg5REB6ilv7sM5WsAn5O3eMgnb8fPAW4AhBioMpIfbP=
+k4VJ2nGuv4XuQpnCGm0Q0uUk5f-2BvJiMICQYXrn4M5k-3D )   comunity=20
+( http://ablinks.mail.wirexapp.com/ls/click?upn=3DNNfDklBYPW4P8QwJoaOnY9DpX=
+aFelAFHhNQbo1EhmZFkNcfY7EEjXxUv2W7EFgcQB3UDVuxUyiLUoyP8PmHIXQ-3D-3DEDDe_zbK=
+357ad4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1SNelmWGadlVWoa1WPzSlyv8GZSZ4DutQrLFNs=
+r2MHLXWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFdQ0ELACXuDmC4csi7HZb72NdGWd6gnKciahaf=
+Sh7smmKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B8qvBLReYIHwZmMuxzn9I3NNs7632Y3tHwgj5=
+71X-2FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZu2S92u8ww1Ds0Bcf3FJXBpXevpiNz-2FgeKV=
+WX4u4szG0iTGy470qWea1ZW7rm6M12rmgU8iVqaNwG7NvwhuPMv8dERe1i8fxHh-2FDREQ5TqdR=
+Uad11H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQnTolYMl6z-2F-2B1QAS9Oc8arzROyKQlK6lo6=
+Mq4QnMi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-2BYNAZy5MMWR3jPhyq44sjBwWQA8VR8wsK-2=
+Fw0nkIMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhWYwAPSoebBBO7uK3jLCHhihfZlZzgixaqsX0t=
+-2FFv-2Bzn0l91lrIEKOdDpJeHmY2k9kJy4q37OW1q8dfBEUOJutfJlrjnPGjtQJqhuI9TEODDP=
+SarJxbNyYiAohDBTWuDCviPl2kMznD2S7X-2FqDmMHf8Ojp-2Fduxya3V1OfKksPPHqGIPw7eWh=
+9PH7R-2BnqnIa7xc9cGEA-2FqIrQpSQ0ng-3D )   medium=20
+( http://ablinks.mail.wirexapp.com/ls/click?upn=3DNNfDklBYPW4P8QwJoaOnY2x6l=
+MAX2YtNZ3UfsOE6i0dtVH3cLRJ-2FkTQ-2FdbDV3g2NOZm88RtdwwKxOWiH-2FvnGsw-3D-3Dsi=
+QN_zbK357ad4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1SNelmWGadlVWoa1WPzSlyv8GZSZ4Dut=
+QrLFNsr2MHLXWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFdQ0ELACXuDmC4csi7HZb72NdGWd6gnK=
+ciahafSh7smmKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B8qvBLReYIHwZmMuxzn9I3NNs7632Y3=
+tHwgj571X-2FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZu2S92u8ww1Ds0Bcf3FJXBpXevpiNz-=
+2FgeKVWX4u4szG0iTGy470qWea1ZW7rm6M12rmgU8iVqaNwG7NvwhuPMv8dERe1i8fxHh-2FDRE=
+Q5TqdRUad11H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQnTolYMl6z-2F-2B1QAS9Oc8arzROyKQ=
+lK6lo6Mq4QnMi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-2BYNAZy5MMWR3jPhyq44sjBwWQA8VR=
+8wsK-2Fw0nkIMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhWYwAPSoebBBO7uK3jLCHhihfZlZzgix=
+aqsX0t-2FFv-2Bzn0l91lrIEKOdDpJeHvBkNByBA-2BW95EPmswK3TwFQzjBWS-2BVa-2BqYR3M=
+xG4EXOny5pZh-2FotylB-2FakNCzq1nEuXtm2Z30-2Bs6-2FACLp1xJlitAC-2BnhaXXhiVlZbU=
+00NkYpq8SgP1r9imcoYRJ5-2BHe3xWpetLtpvvMSPD1Ig0-2FlS8-3D )   medium=20
+( http://ablinks.mail.wirexapp.com/ls/click?upn=3DNNfDklBYPW4P8QwJoaOnY7Fab=
+v-2BT7SZLdkSyLvYWeKVBEDXElVsP6ZeJaR-2FVESdnTecXOSnziNGfmHJZStYp2A-3D-3DFEA2=
+_zbK357ad4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1SNelmWGadlVWoa1WPzSlyv8GZSZ4DutQr=
+LFNsr2MHLXWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFdQ0ELACXuDmC4csi7HZb72NdGWd6gnKci=
+ahafSh7smmKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B8qvBLReYIHwZmMuxzn9I3NNs7632Y3tH=
+wgj571X-2FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZu2S92u8ww1Ds0Bcf3FJXBpXevpiNz-2F=
+geKVWX4u4szG0iTGy470qWea1ZW7rm6M12rmgU8iVqaNwG7NvwhuPMv8dERe1i8fxHh-2FDREQ5=
+TqdRUad11H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQnTolYMl6z-2F-2B1QAS9Oc8arzROyKQlK=
+6lo6Mq4QnMi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-2BYNAZy5MMWR3jPhyq44sjBwWQA8VR8w=
+sK-2Fw0nkIMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhWYwAPSoebBBO7uK3jLCHhihfZlZzgixaq=
+sX0t-2FFv-2Bzn0l91lrIEKOdDpJeHmwN-2FrW2oopt-2BKfmNcUnUmbyrO5L0GY6zyKjmUZZon=
+JbMJe8slPA8HSV-2B-2BDYkChD6-2ByhKEIkM7YcoPozpiAc448rDdKjGiTHq-2F-2Fwph1ICzz=
+I6PiTS1UPLTwW6Cw8Lx69pU6A2WZISUZjQZeEYLqRE34-3D )      =C2=A9
+2015=E2=80=932023 wirexapp.com, All Rights Reserved.
+
+Availability of the Wirex services and Wirex entity you receive
+services from depends on your location. Your location and Wirex
+entity providing services may affect your rights and protections;
+therefore, please read the terms and conditions that apply to you
+carefully. If you have questions regarding the Wirex entity you
+receive services from, please reach out to us via the in-app chat
+in the Wirex app.
+
+Wirex Limited whose registered office is 9th Floor 107
+Cheapside, London, United Kingdom, EC2V 6DN is authorised by the
+Financial Conduct Authority (FRN: 902025) under the Electronic
+Money Regulations 2017 for issuing electronic money and providing
+payment services. UAB Wirex whose registered office is
+Perk=C5=ABnkiemio g. 13 =E2=80=93 91, Vilnius, Lithuania provides fiat
+currency services through its partners with regulatory approvals.
+However, no deposit insurance or protection schemes apply to
+services provided by UAB Wirex. Wirex Pte Ltd (CRN 201731976E)
+whose registered office is 36 Robinson Road, #02-106, Singapore
+068877 is subject to the Payments Services Act 2019 and is
+currently operating under an exemption while its application is
+being reviewed by the Monetary Authority of Singapore. Wirex
+Digital d.o.o (CRN 78679748084) is registered as a Virtual Asset
+Service Provider (VASP) with the Croatian Financial Services
+Supervisory Agency (HANFA) and provides crypto asset services.
+Wirex USA Inc. (CRN 6805163), whose registered office is 8 The
+Green, Ste A, Dover, Delaware, 19901, provides services through
+its partners with regulatory approvals.
+
+Wirex=E2=80=99s cryptoasset services are not regulated by FCA, Bank of
+Lithuania or Dutch National Bank. Due to the potential volatility
+of the cryptoasset markets, the value of your assets may fall
+significantly and lead to a total loss, and you should invest at
+your own risk. Tax may be payable on profits. You may be unable
+to access Financial Ombudsman Scheme or other regulated complaint
+procedures for your complaints arising from Wirex=E2=80=99s cryptoasset
+services. You access Wirex=E2=80=99s cryptoasset services on your own
+initiative and without solicitation from any other Wirex entity.
+
+Unsubscribe ( http://ablinks.mail.wirexapp.com/ls/click?upn=3DNNfDklBYPW4P8=
+QwJoaOnY585AuWK8wANdMYxXoYxuEPYWtJDTxc7kKVjrCGOim0fOxllpL9yum4IU9XlEMMp6Orf=
+WzYZ5mu-2BWayjZ41Tbile5n8iH8FGN3NNeeC9yeIr-2Br5Q2JiFwq3FfB5ND-2BaLWTo1umRAo=
+AYNWihpOeQuGdYLdLoBiMQiwvcyyjRlSeXI3RXW2-2BB10x9IdXRNPjttprOxkqKfsPjLQtbD6n=
+lq2Nvf0ajH-2F-2FI6d-2BqLNXWND-2F1kibY5g5MpxIdRLrve9LgWLjBbCPJi6acmUYCN-2Fa7=
+fgDTs95HPbOg6QgXaKlMhumN6w7Oruuo9JWZgIWeupKDb4H-2B-2BoOUnDQDQoB-2BGkDd5bKNj=
+yMgGYmTovHFIAQlcgTjiQSSuc-2FEt9iTkfTH44Ebr64ipJU5FGE3eF-2FQH-2BBWoVLY48PdOD=
+fMbxZnJqKSFvjE5OuHTBB-2BguinXeZFb5Y9A8EkDKY8vH4Ou30AeOXj1Kr8Ld3qKaP9sVWOWlX=
+s28c7I8hh3Digvw8AhwTOEnrKvsg8UWKg-2FbLKBYE4P-2BKXn8YwOPxYLO9rLaeZPM-2Bub3iI=
+IoDMUWnZgMzS789pHrJyaYHF8DFV5FAKt77Lr2TlAaSklwV-2FFfltMxwzF-2FHzVpdQdLVVbbQ=
+377Yg-2BVY5IoK0YEJMtKs2kaL5Q63zgmiEd-2BkOC3gDkL3SMiIFaEXB6vYxve9qb_zbK357ad=
+4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1SNelmWGadlVWoa1WPzSlyv8GZSZ4DutQrLFNsr2MHL=
+XWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFdQ0ELACXuDmC4csi7HZb72NdGWd6gnKciahafSh7sm=
+mKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B8qvBLReYIHwZmMuxzn9I3NNs7632Y3tHwgj571X-2=
+FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZu2S92u8ww1Ds0Bcf3FJXBpXevpiNz-2FgeKVWX4u4=
+szG0iTGy470qWea1ZW7rm6M12rmgU8iVqaNwG7NvwhuPMv8dERe1i8fxHh-2FDREQ5TqdRUad11=
+H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQnTolYMl6z-2F-2B1QAS9Oc8arzROyKQlK6lo6Mq4Qn=
+Mi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-2BYNAZy5MMWR3jPhyq44sjBwWQA8VR8wsK-2Fw0nk=
+IMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhWYwAPSoebBBO7uK3jLCHhihfZlZzgixaqsX0t-2FFv=
+-2Bzn0l91lrIEKOdDpJeHqDsLAoH-2F-2BawBz4z6AcWsSYIiV7rLwdIpLGTA5sBwzZviJFyYMW=
+-2F9opFc7xRg25M7hAhgPed8P8s7W0zNQhlv-2Bx3Uu3he0aCBl7iUtUr3yZaIjBWsOHzMcSrzo=
+tFS-2FxeYa8sPgqup5rVyRjQN2TBPA8-3D )
+--30020cd782d8d553ecf715cf853b708c2cbf8f806b9dd7fdc274d434c005
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html><html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"u=
+rn:schemas-microsoft-com:office:office" lang=3D"en"><head><title></title><m=
+eta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><met=
+a name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"><!--=
+[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInc=
+h><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]--><!--[if !mso]><=
+!--><link=20
+href=3D"https://fonts.googleapis.com/css?family=3DIBM+Plex+Sans" rel=3D"sty=
+lesheet" type=3D"text/css"><!--<![endif]--><style>
+*{box-sizing:border-box}body{margin:0;padding:0}a[x-apple-data-detectors]{c=
+olor:inherit!important;text-decoration:inherit!important}#MessageViewBody a=
+{color:inherit;text-decoration:none}p{line-height:inherit}.desktop_hide,.de=
+sktop_hide table{mso-hide:all;display:none;max-height:0;overflow:hidden}.im=
+age_block img+div{display:none} @media (max-width:610px){.row-content{width=
+:100%!important}.mobile_hide{display:none}.stack .column{width:100%;display=
+:block}.mobile_hide{min-height:0;max-height:0;max-width:0;overflow:hidden;f=
+ont-size:0}.desktop_hide,.desktop_hide table{display:table!important;max-he=
+ight:none!important}}
+</style></head><body style=3D"margin:0;background-color:#fff;padding:0;-web=
+kit-text-size-adjust:none;text-size-adjust:none"><table class=3D"nl-contain=
+er" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D=
+"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;background-co=
+lor:#fff"><tbody><tr><td><table class=3D"row row-1" align=3D"center" width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" style=3D"mso-table-lspace:0;mso-table-rspace:0;background-size:auto">=
+<tbody>
+<tr><td><table class=3D"row-content" align=3D"center" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace=
+:0;mso-table-rspace:0;background-color:#fff;background-size:auto;color:#000=
+;width:590px" width=3D"590"><tbody><tr><td class=3D"column column-1" width=
+=3D"100%" style=3D"mso-table-lspace:0;mso-table-rspace:0;font-weight:400;te=
+xt-align:left;padding-top:24px;vertical-align:top;border-top:0;border-right=
+:0;border-bottom:0;border-left:0"><table class=3D"html_block block-1"=20
+width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0"><tr><td class=3D=
+"pad"><div style=3D"font-family:IBM Plex Sans,Arial,Sans-serif;text-align:c=
+enter" align=3D"center"><img width=3D"100" height=3D"22" border=3D"0" style=
+=3D"border:0; outline:none; text-decoration:none; display:inline-block;" sr=
+c=3D"https://img.wirexapp.com/image/upload/v1663321013/email/wirex-logo-new=
+.png" alt=3D"wirex logo"></div></td></tr></table></td></tr></tbody></table>=
+</td></tr></tbody></table><table class=3D"row row-2" align=3D"center" width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" style=3D"mso-table-lspace:0;mso-table-rspace:0"><tbody><tr>
+<td><table class=3D"row-content stack" align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspa=
+ce:0;mso-table-rspace:0;color:#000;width:590px" width=3D"590"><tbody><tr><t=
+d class=3D"column column-1" width=3D"100%" style=3D"mso-table-lspace:0;mso-=
+table-rspace:0;font-weight:400;text-align:left;padding-bottom:5px;padding-t=
+op:5px;vertical-align:top;border-top:0;border-right:0;border-bottom:0;borde=
+r-left:0"><table class=3D"paragraph_block block-1" width=3D"100%"=20
+border=3D"0" cellpadding=3D"10" cellspacing=3D"0" role=3D"presentation" sty=
+le=3D"mso-table-lspace:0;mso-table-rspace:0;word-break:break-word"><tr><td =
+class=3D"pad"><div style=3D"color:#101b24;direction:ltr;font-family:Arial,A=
+rial,Sans-serif;font-size:30px;font-weight:700;letter-spacing:0;line-height=
+:normal;text-align:center;mso-line-height-alt:NaNpx"><p style=3D"margin:0">
+<table class=3D"nl-container" width=3D"100%" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-ta=
+ble-rspace:0;background-color:#fff"><tbody><tr><td><table class=3D"row row-=
+1" align=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace=
+:0"><tbody><tr><td><table class=3D"row-content stack" align=3D"center" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"mso-table-lspace:0;mso-table-rspace:0;color:#000;width:100%" width=3D"100%=
+"><tbody><tr><td class=3D"column column-1" width=3D"100%" style=3D"mso-tabl=
+e-lspace:0;mso-table-rspace:0;font-weight:400;text-align:left;vertical-alig=
+n:top;border-top:0;border-right:0;border-bottom:0;border-left:0"><table cla=
+ss=3D"paragraph_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"1=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-=
+table-rspace:0;word-break:break-word"><tr><td class=3D"pad"><div style=3D"c=
+olor:#101b24;font-size:14px;font-family:Arial,Arial,Sans-serif;font-weight:=
+400;line-height:normal;text-align:left;direction:ltr;letter-spacing:0;mso-l=
+ine-height-alt:NaNpx">
+<p style=3D"margin:0;margin-bottom:0"></p>
+<p style=3D"margin:0">
+</p>
+</div></td></tr></table></td></tr></tbody></table></td></tr></tbody></table=
+></td></tr></tbody></table>
+<!-- End -->Today's Bitcoin (BTC) price is $27260.14
+</p></div></td></tr></table></td></tr></tbody></table></td></tr></tbody></t=
+able><table class=3D"row row-3" align=3D"center" width=3D"100%" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-ta=
+ble-lspace:0;mso-table-rspace:0"><tbody><tr><td><table class=3D"row-content=
+ stack" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;backgro=
+und-color:#fff;border-radius:0;color:#000;width:590px" width=3D"590"><tbody=
+><tr>
+<td class=3D"column column-1" width=3D"100%" style=3D"mso-table-lspace:0;ms=
+o-table-rspace:0;font-weight:400;text-align:left;padding-bottom:5px;padding=
+-top:5px;vertical-align:top;border-top:0;border-right:0;border-bottom:0;bor=
+der-left:0"><table class=3D"image_block block-1" width=3D"100%" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-ta=
+ble-lspace:0;mso-table-rspace:0"><tr><td class=3D"pad" style=3D"padding-lef=
+t:24px;padding-right:24px;width:100%"><div class=3D"alignment"=20
+align=3D"center" style=3D"line-height:10px"><img src=3D"https://cdn.braze.e=
+u/appboy/communication/assets/image_assets/images/623888dae908b51966c2da9d/=
+original.png?1647872218" style=3D"display:block;height:auto;border:0;width:=
+118px;max-width:100%" width=3D"118"></div></td></tr></table><table class=3D=
+"button_block block-2" width=3D"100%" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rsp=
+ace:0"><tr><td class=3D"pad"=20
+style=3D"padding-bottom:10px;padding-left:5px;padding-right:5px;padding-top=
+:20px;text-align:center"><div class=3D"alignment" align=3D"center">
+<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
+=3D"urn:schemas-microsoft-com:office:word" href=3D"https://wirex.app.link/9=
+IOsXTwpRB?%24deeplink_no_attribution=3Dtrue&action=3Dadd-funds&lid=3Dgwtpbl=
+ecbxis" style=3D"height:44px;width:130px;v-text-anchor:middle;" arcsize=3D"=
+10%" stroke=3D"false" fillcolor=3D"#009B5B"><w:anchorlock/><v:textbox inset=
+=3D"0px,0px,0px,0px"><center style=3D"color:#FFFFFF; font-family:Arial; fon=
+t-size:16px"><![endif]-->
+<a href=3D"http://ablinks.mail.wirexapp.com/ls/click?upn=3DNNfDklBYPW4P8QwJ=
+oaOnY51qqBI455Q7btfF1YqXkzHSldzgNTVyOqkdvke4p-2F1-2BnuWsQldA19IhMkOmNQgq-2B=
+WUhhDLB3-2FMLvch1dTGRs99kERhJmWl8MUevGxc1CvzMeWodFkDBwDBPD5kxJo7-2Fag-3D-3D=
+H7E8_zbK357ad4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1SNelmWGadlVWoa1WPzSlyv8GZSZ4D=
+utQrLFNsr2MHLXWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFdQ0ELACXuDmC4csi7HZb72NdGWd6g=
+nKciahafSh7smmKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B8qvBLReYIHwZmMuxzn9I3NNs7632=
+Y3tHwgj571X-2FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZu2S92u8ww1Ds0Bcf3FJXBpXevpiN=
+z-2FgeKVWX4u4szG0iTGy470qWea1ZW7rm6M12rmgU8iVqaNwG7NvwhuPMv8dERe1i8fxHh-2FD=
+REQ5TqdRUad11H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQnTolYMl6z-2F-2B1QAS9Oc8arzROy=
+KQlK6lo6Mq4QnMi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-2BYNAZy5MMWR3jPhyq44sjBwWQA8=
+VR8wsK-2Fw0nkIMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhWYwAPSoebBBO7uK3jLCHhihfZlZzg=
+ixaqsX0t-2FFv-2Bzn0l91lrIEKOdDpJeHlsvvaWRizR6unx-2B5BPVyPZgoMH1HH2uHNsRk80n=
+Cv5QaC1otxyhxr1686WbRc6kPUv1hA3EcTDCnURndBqEQ2VtGKysaGjscSXb3kX95cYg7I29Owg=
+I7VUNuE1I2zf7DApUcHZ-2Fyv44PhGWuhYsnwM-3D" target=3D"_blank" style=3D"text-=
+decoration:none;display:inline-block;color:#FFFFFF;background-color:#009B5B=
+;border-radius:4px;width:auto;border-top:0px solid #009B5B;font-weight:400;=
+border-right:0px solid #009B5B;border-bottom:0px solid #009B5B;border-left:=
+0px solid #009B5B;padding-top:10px;padding-bottom:10px;font-family:'Arial',=
+ Arial, Sans-serif;font-size:16px;text-align:center;mso-border-alt:none;wor=
+d-break:keep-all;"><span style=3D"padding-left:44px;padding-right:44px;font=
+-size:16px;display:inline-block;letter-spacing:normal;"><span dir=3D"ltr" s=
+tyle=3D"word-break: break-word; line-height: 24px;">Buy Now</span></span></=
+a>
+<!--[if mso]></center></v:textbox></v:roundrect><![endif]--></div></td></tr=
+></table></td></tr></tbody></table></td></tr></tbody></table><table class=
+=3D"row row-4" align=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-=
+table-rspace:0"><tbody><tr><td><table class=3D"row-content stack" align=3D"=
+center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentati=
+on"=20
+style=3D"mso-table-lspace:0;mso-table-rspace:0;background-color:#fff;color:=
+#000;width:590px" width=3D"590"><tbody><tr><td class=3D"column column-1" wi=
+dth=3D"100%" style=3D"mso-table-lspace:0;mso-table-rspace:0;font-weight:400=
+;text-align:left;padding-bottom:5px;padding-top:5px;vertical-align:top;bord=
+er-top:0;border-right:0;border-bottom:0;border-left:0"><table class=3D"text=
+_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation"=20
+style=3D"mso-table-lspace:0;mso-table-rspace:0;word-break:break-word"><tr><=
+td class=3D"pad" style=3D"padding-bottom:10px;padding-left:40px;padding-rig=
+ht:40px;padding-top:20px"><div style=3D"font-family:Arial,sans-serif"><div =
+class style=3D"font-size:14px;font-family:Arial,'Helvetica Neue',Helvetica,=
+sans-serif;mso-line-height-alt:16.8px;color:#212323;line-height:1.2"><p sty=
+le=3D"margin:0;font-size:16px;text-align:center;mso-line-height-alt:19.2px"=
+>
+<span style=3D"font-size:16px;"><span style><span style>This price was corr=
+ect at the time of sending this email.&nbsp;</span></span></p><p style=3D"m=
+argin:0;font-size:16px;text-align:center;mso-line-height-alt:19.2px"><span =
+style=3D"font-size:16px;"><span style><span style><br>This email was sent o=
+n:  22 Apr 2023 </span></span><span style=3D"background-color:transparent;"=
+></span></span></p></div>
+</div></td></tr></table></td></tr></tbody></table></td></tr></tbody></table=
+><table class=3D"row row-5" align=3D"center" width=3D"100%" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-=
+lspace:0;mso-table-rspace:0;background-size:auto"><tbody><tr><td><table cla=
+ss=3D"row-content" align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation"=20
+style=3D"mso-table-lspace:0;mso-table-rspace:0;background-size:auto;backgro=
+und-color:#ededed;border-radius:20px;color:#000;width:590px" width=3D"590">=
+<tbody><tr><td class=3D"column column-1" width=3D"100%" style=3D"mso-table-=
+lspace:0;mso-table-rspace:0;font-weight:400;text-align:left;padding-bottom:=
+16px;padding-left:16px;padding-right:16px;padding-top:16px;vertical-align:t=
+op;border-top:0;border-right:0;border-bottom:0;border-left:0"><table class=
+=3D"heading_block block-1" width=3D"100%" border=3D"0"=20
+cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-tabl=
+e-lspace:0;mso-table-rspace:0"><tr><td class=3D"pad" style=3D"padding-botto=
+m:10px;padding-left:10px;padding-right:10px;padding-top:5px;text-align:cent=
+er;width:100%"><h1 style=3D"margin:0;color:#212323;direction:ltr;font-famil=
+y:Arial,'Helvetica Neue',Helvetica,sans-serif;font-size:20px;font-weight:70=
+0;letter-spacing:normal;line-height:120%;text-align:center;margin-top:0;mar=
+gin-bottom:0">
+<span class=3D"tinyMce-placeholder">How do I buy crypto? </span></h1></td><=
+/tr></table><table class=3D"text_block block-2" width=3D"100%" border=3D"0"=
+ cellpadding=3D"10" cellspacing=3D"0" role=3D"presentation"=20
+style=3D"mso-table-lspace:0;mso-table-rspace:0;word-break:break-word"><tr><=
+td class=3D"pad"><div style=3D"font-family:Arial,sans-serif"><div class sty=
+le=3D"font-size:14px;font-family:Arial,'Helvetica Neue',Helvetica,sans-seri=
+f;mso-line-height-alt:16.8px;color:#101b24;line-height:1.2"><p style=3D"mar=
+gin:0;text-align:center;font-size:16px;mso-line-height-alt:19.2px">
+<span style=3D"font-size:16px;">Check out our support article for a step by=
+ step guide to buying with your Wirex app.</span></p><p=20
+style=3D"margin:0;text-align:center;font-size:16px;mso-line-height-alt:16.8=
+px">&nbsp;</p><p style=3D"margin:0;text-align:center;font-size:16px;mso-lin=
+e-height-alt:19.2px"><span style=3D"font-size:16px;"><strong><a href=3D"htt=
+p://ablinks.mail.wirexapp.com/ls/click?upn=3DNNfDklBYPW4P8QwJoaOnYz0MJnRVdi=
+rUPC86MJWdLASWmLsMqMzqjqMIpP1wyzOa2QbrxYNTDE7TlwzAajhiz3INgfMoQXgx8onnZYHVh=
+oRuf4OkbP0yir1r2O0jRDDXxFtY_zbK357ad4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1SNelmW=
+GadlVWoa1WPzSlyv8GZSZ4DutQrLFNsr2MHLXWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFdQ0ELA=
+CXuDmC4csi7HZb72NdGWd6gnKciahafSh7smmKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B8qvBL=
+ReYIHwZmMuxzn9I3NNs7632Y3tHwgj571X-2FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZu2S92=
+u8ww1Ds0Bcf3FJXBpXevpiNz-2FgeKVWX4u4szG0iTGy470qWea1ZW7rm6M12rmgU8iVqaNwG7N=
+vwhuPMv8dERe1i8fxHh-2FDREQ5TqdRUad11H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQnTolYM=
+l6z-2F-2B1QAS9Oc8arzROyKQlK6lo6Mq4QnMi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-2BYNA=
+Zy5MMWR3jPhyq44sjBwWQA8VR8wsK-2Fw0nkIMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhWYwAPS=
+oebBBO7uK3jLCHhihfZlZzgixaqsX0t-2FFv-2Bzn0l91lrIEKOdDpJeHkYHFvxUAA8euMUeivy=
+Ou5pW6SywIPG-2BzgVB-2Fb2nicGZsLT4-2BzogJXFyZV3Eo5UTy-2BwZ8OOEllHjIltZPx3SjF=
+c0WnlEIk02RkKEwpQAcIX9NIBUIAPyAJOd0FMMpZtaVEPS6LncQITsmRC7jF69xG4-3D" targe=
+t=3D"_blank" rel=3D"noopener" style=3D"text-decoration: underline; color: #=
+009b5b;">Learn more</a></strong></span></p></div></div></td></tr></table></=
+td></tr></tbody></table></td></tr></tbody></table><table=20
+class=3D"row row-6" align=3D"center" width=3D"100%" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0=
+;mso-table-rspace:0"><tbody><tr><td><table class=3D"row-content stack" alig=
+n=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"mso-table-lspace:0;mso-table-rspace:0;background-color:#f=
+ff;border-radius:0;color:#000;width:590px" width=3D"590"><tbody><tr><td cla=
+ss=3D"column column-1" width=3D"100%"=20
+style=3D"mso-table-lspace:0;mso-table-rspace:0;font-weight:400;text-align:l=
+eft;padding-bottom:5px;padding-top:5px;vertical-align:top;border-top:0;bord=
+er-right:0;border-bottom:0;border-left:0"><table class=3D"paragraph_block b=
+lock-1" width=3D"100%" border=3D"0" cellpadding=3D"10" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;word-bre=
+ak:break-word"><tr><td class=3D"pad"><div=20
+style=3D"color:#101b24;direction:ltr;font-family:IBM Plex Sans,Arial,Sans-s=
+erif;font-size:14px;font-weight:400;letter-spacing:0;line-height:normal;tex=
+t-align:left;mso-line-height-alt:NaNpx"><p style=3D"margin:0"><code title=
+=3D"email_footer_global"><table class=3D"nl-container" width=3D"100%" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"=
+mso-table-lspace:0;mso-table-rspace:0;background-color:#fff"><tbody><tr><td=
+><table class=3D"row row-1" align=3D"center" width=3D"100%" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-=
+lspace:0;mso-table-rspace:0;background-size:auto"><tbody>
+<tr><td><table class=3D"row-content" align=3D"center" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace=
+:0;mso-table-rspace:0;background-size:auto;border-radius:0;color:#000;width=
+:100%" width=3D"100%"><tbody><tr><td class=3D"column column-1" width=3D"100=
+%" style=3D"mso-table-lspace:0;mso-table-rspace:0;font-weight:400;text-alig=
+n:left;padding-bottom:16px;padding-left:16px;padding-right:16px;padding-top=
+:16px;vertical-align:top;border-top:0;border-right:0;border-bottom:0;border=
+-left:0">
+<table class=3D"divider_block block-1" width=3D"100%" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace=
+:0;mso-table-rspace:0"><tr><td class=3D"pad" style=3D"padding-bottom:24px;p=
+adding-top:10px"><div class=3D"alignment" align=3D"center"><table border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%=
+" style=3D"mso-table-lspace:0;mso-table-rspace:0"><tr><td class=3D"divider_=
+inner" style=3D"font-size:1px;line-height:1px;border-top:1px solid #82827f"=
+><span>=E2=80=8A</span></td></tr></table></div></td></tr></table>
+<table class=3D"html_block block-2" width=3D"100%" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;=
+mso-table-rspace:0"><tr><td class=3D"pad"><div style=3D"font-family:Open Sa=
+ns;text-align:center" align=3D"center">
+<table width=3D"120" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+  <tr>
+    <td align=3D"center" valign=3D"top" style=3D"padding-top:0;padding-bott=
+om:0;padding-right: 12px; padding-left: 12px;">
+      <a href=3D"http://ablinks.mail.wirexapp.com/ls/click?upn=3DNNfDklBYPW=
+4P8QwJoaOnYzn-2B9sqRgKqnDy04yW66juo4C5-2F7X9hksniN1LFoDAFxN1m2ga-2FshhAmV-2=
+FPw55THTA-3D-3Do3Jk_zbK357ad4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1SNelmWGadlVWoa=
+1WPzSlyv8GZSZ4DutQrLFNsr2MHLXWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFdQ0ELACXuDmC4c=
+si7HZb72NdGWd6gnKciahafSh7smmKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B8qvBLReYIHwZm=
+Muxzn9I3NNs7632Y3tHwgj571X-2FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZu2S92u8ww1Ds0=
+Bcf3FJXBpXevpiNz-2FgeKVWX4u4szG0iTGy470qWea1ZW7rm6M12rmgU8iVqaNwG7NvwhuPMv8=
+dERe1i8fxHh-2FDREQ5TqdRUad11H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQnTolYMl6z-2F-2=
+B1QAS9Oc8arzROyKQlK6lo6Mq4QnMi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-2BYNAZy5MMWR3=
+jPhyq44sjBwWQA8VR8wsK-2Fw0nkIMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhWYwAPSoebBBO7u=
+K3jLCHhihfZlZzgixaqsX0t-2FFv-2Bzn0l91lrIEKOdDpJeHgIuov7YgFuJO9Rzs5j7e8BRa7K=
+2-2BBTNj2Z8oJXpJjzvx1g4R8RirRPleVmyl4yeiln4dihbFNxoDEP21okeiMFrLUWbNzMMiBci=
+NKqaZvA-2FS-2FKXlEozc2EsTAydR32n-2F54TG9XhjWWji0YKLU-2B325k-3D" target=3D"=
+=E2=80=9D_blank=E2=80=9D">
+        <img width=3D"32" height=3D"32" border=3D"0" style=3D"border:0; out=
+line:none; text-decoration:none; display:block;" src=3D"https://img.wirexap=
+p.com/image/upload/v1663328645/email/facebook-new.png" alt=3D"facebook">
+      </a>
+    </td>
+    <td align=3D"center" valign=3D"top" style=3D"padding-top:0;padding-bott=
+om:0;padding-right: 12px; padding-left: 12px;">
+      <a href=3D"http://ablinks.mail.wirexapp.com/ls/click?upn=3DNNfDklBYPW=
+4P8QwJoaOnY6aA0-2Bpb8sF-2FFWObtDtmHASXKAE9FD3FL4rPd2Gz6r3ZnTBC5TKYDeHCa-2F4=
+9P8IL-2FA-3D-3DnQwX_zbK357ad4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1SNelmWGadlVWoa=
+1WPzSlyv8GZSZ4DutQrLFNsr2MHLXWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFdQ0ELACXuDmC4c=
+si7HZb72NdGWd6gnKciahafSh7smmKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B8qvBLReYIHwZm=
+Muxzn9I3NNs7632Y3tHwgj571X-2FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZu2S92u8ww1Ds0=
+Bcf3FJXBpXevpiNz-2FgeKVWX4u4szG0iTGy470qWea1ZW7rm6M12rmgU8iVqaNwG7NvwhuPMv8=
+dERe1i8fxHh-2FDREQ5TqdRUad11H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQnTolYMl6z-2F-2=
+B1QAS9Oc8arzROyKQlK6lo6Mq4QnMi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-2BYNAZy5MMWR3=
+jPhyq44sjBwWQA8VR8wsK-2Fw0nkIMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhWYwAPSoebBBO7u=
+K3jLCHhihfZlZzgixaqsX0t-2FFv-2Bzn0l91lrIEKOdDpJeHogGhdwy9YvmstKf8aXfS5YlxSW=
+jVCEYqst5KNj4iddxfN7QVwxPNtOpgbfq0DnaNsfDBQzGo2hq4VWVyh1Uq64X8lVqsLj0n6Hwro=
+LIm-2BsyBQcr5Me9z9jq36aDufd3rFbDAY0aaz2L-2FIXtiY5edPI-3D" target=3D"=E2=80=
+=9D_blank=E2=80=9D">
+        <img width=3D"32" height=3D"32" border=3D"0" style=3D"border:0; out=
+line:none; text-decoration:none; display:block;" src=3D"https://img.wirexap=
+p.com/image/upload/v1663328645/email/twitter-new.png" alt=3D"twitter">
+      </a>
+    </td>
+    <td align=3D"center" valign=3D"top" style=3D"padding-top:0;padding-bott=
+om:0;padding-right: 12px; padding-left: 12px;">
+      <a href=3D"http://ablinks.mail.wirexapp.com/ls/click?upn=3DNNfDklBYPW=
+4P8QwJoaOnY9DpXaFelAFHhNQbo1EhmZFkNcfY7EEjXxUv2W7EFgcQB3UDVuxUyiLUoyP8PmHIX=
+Q-3D-3DFH_e_zbK357ad4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1SNelmWGadlVWoa1WPzSlyv=
+8GZSZ4DutQrLFNsr2MHLXWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFdQ0ELACXuDmC4csi7HZb72=
+NdGWd6gnKciahafSh7smmKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B8qvBLReYIHwZmMuxzn9I3=
+NNs7632Y3tHwgj571X-2FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZu2S92u8ww1Ds0Bcf3FJXB=
+pXevpiNz-2FgeKVWX4u4szG0iTGy470qWea1ZW7rm6M12rmgU8iVqaNwG7NvwhuPMv8dERe1i8f=
+xHh-2FDREQ5TqdRUad11H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQnTolYMl6z-2F-2B1QAS9Oc=
+8arzROyKQlK6lo6Mq4QnMi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-2BYNAZy5MMWR3jPhyq44s=
+jBwWQA8VR8wsK-2Fw0nkIMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhWYwAPSoebBBO7uK3jLCHhi=
+hfZlZzgixaqsX0t-2FFv-2Bzn0l91lrIEKOdDpJeHoXX1fpd0o1A5INHSkAQYmiIDa2V5TL-2Fu=
+go3xAUP4n7qinHhEtPBSBSaRbOocmsqZaBNToZ5tAJKeBK6ul5iMr-2FJqNfOkEaFxJ-2Bylbjw=
+Op4jWgl9evBGDlT6QDOjaQI141lkivmH-2FK0FkRZQ-2FQdnjvU-3D" target=3D"=E2=80=9D=
+_blank=E2=80=9D">
+        <img width=3D"32" height=3D"32" border=3D"0" style=3D"border:0; out=
+line:none; text-decoration:none; display:block;" src=3D"https://img.wirexap=
+p.com/image/upload/v1663328645/email/communiity-new.png" alt=3D"comunity">
+      </a>
+    </td>
+    <td align=3D"center" valign=3D"top" style=3D"padding-top:0;padding-bott=
+om:0;padding-right: 12px; padding-left: 12px;">
+      <a href=3D"http://ablinks.mail.wirexapp.com/ls/click?upn=3DNNfDklBYPW=
+4P8QwJoaOnY2x6lMAX2YtNZ3UfsOE6i0dtVH3cLRJ-2FkTQ-2FdbDV3g2NOZm88RtdwwKxOWiH-=
+2FvnGsw-3D-3Ds8Vz_zbK357ad4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1SNelmWGadlVWoa1W=
+PzSlyv8GZSZ4DutQrLFNsr2MHLXWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFdQ0ELACXuDmC4csi=
+7HZb72NdGWd6gnKciahafSh7smmKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B8qvBLReYIHwZmMu=
+xzn9I3NNs7632Y3tHwgj571X-2FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZu2S92u8ww1Ds0Bc=
+f3FJXBpXevpiNz-2FgeKVWX4u4szG0iTGy470qWea1ZW7rm6M12rmgU8iVqaNwG7NvwhuPMv8dE=
+Re1i8fxHh-2FDREQ5TqdRUad11H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQnTolYMl6z-2F-2B1=
+QAS9Oc8arzROyKQlK6lo6Mq4QnMi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-2BYNAZy5MMWR3jP=
+hyq44sjBwWQA8VR8wsK-2Fw0nkIMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhWYwAPSoebBBO7uK3=
+jLCHhihfZlZzgixaqsX0t-2FFv-2Bzn0l91lrIEKOdDpJeHmHf5Y37oFBeqPRrem613s5lumkks=
+aOREgUo5R3t4u1zFPuA06QY5oauVh6mPMm2A4bZKfq5mbnm8rQnPrC-2BGdqq1t6yO5RVD4gym2=
+XQ3kWbJg0KhEW-2F1Vu-2FypuQFEOksdhhFOGYlh4OgaZwPOMl2GM-3D" target=3D"=E2=80=
+=9D_blank=E2=80=9D">
+        <img width=3D"32" height=3D"32" border=3D"0" style=3D"border:0; out=
+line:none; text-decoration:none; display:block;" src=3D"https://img.wirexap=
+p.com/image/upload/v1663328645/email/medium-new.png" alt=3D"medium">
+      </a>
+    </td>
+    <td align=3D"center" valign=3D"top" style=3D"padding-top:0;padding-bott=
+om:0;padding-right: 12px; padding-left: 12px;">
+      <a href=3D"http://ablinks.mail.wirexapp.com/ls/click?upn=3DNNfDklBYPW=
+4P8QwJoaOnY7Fabv-2BT7SZLdkSyLvYWeKVBEDXElVsP6ZeJaR-2FVESdnTecXOSnziNGfmHJZS=
+tYp2A-3D-3DMx1G_zbK357ad4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1SNelmWGadlVWoa1WPz=
+Slyv8GZSZ4DutQrLFNsr2MHLXWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFdQ0ELACXuDmC4csi7H=
+Zb72NdGWd6gnKciahafSh7smmKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B8qvBLReYIHwZmMuxz=
+n9I3NNs7632Y3tHwgj571X-2FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZu2S92u8ww1Ds0Bcf3=
+FJXBpXevpiNz-2FgeKVWX4u4szG0iTGy470qWea1ZW7rm6M12rmgU8iVqaNwG7NvwhuPMv8dERe=
+1i8fxHh-2FDREQ5TqdRUad11H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQnTolYMl6z-2F-2B1QA=
+S9Oc8arzROyKQlK6lo6Mq4QnMi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-2BYNAZy5MMWR3jPhy=
+q44sjBwWQA8VR8wsK-2Fw0nkIMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhWYwAPSoebBBO7uK3jL=
+CHhihfZlZzgixaqsX0t-2FFv-2Bzn0l91lrIEKOdDpJeHniha4lpZ9r9-2FkdSLUMDdhxS2kG-2=
+B-2BH9vPaAtZtWx597V7Xn3tPwjPubYv3WzPlu25N2e0f77p-2BXaLzdhyKlRiFwL-2FN9emg2q=
+pswu9bI0UZBtx8036Y6BjqoAgAPrYIM6sFvLrcDSCv-2FB6zIdnSCm8LU-3D" target=3D"=E2=
+=80=9D_blank=E2=80=9D">
+        <img width=3D"32" height=3D"32" border=3D"0" style=3D"border:0; out=
+line:none; text-decoration:none; display:block;" src=3D"https://img.wirexap=
+p.com/image/upload/v1663328645/email/inistagram-new.png" alt=3D"medium">
+      </a>
+    </td>
+  </tr>
+</table>
+</div></td></tr></table>
+<table class=3D"text_block block-3" width=3D"100%" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;=
+mso-table-rspace:0;word-break:break-word"><tr><td class=3D"pad" style=3D"pa=
+dding-bottom:10px;padding-left:15px;padding-right:10px;padding-top:24px"><d=
+iv style=3D"font-family:Arial,sans-serif"><div class style=3D"font-size:14p=
+x;font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;mso-line-height-a=
+lt:16.8px;color:#82827f;line-height:1.2">
+<p style=3D"margin:0;font-size:14px;mso-line-height-alt:16.8px"><span style=
+=3D"font-size:12px;">=C2=A9 2015=E2=80=932023 wirexapp.com, All </span><spa=
+n style=3D"font-size:12px;">Rights Reserved.</span></p>
+<p style=3D"margin:0;font-size:14px;mso-line-height-alt:16.8px">&nbsp;</p>
+<p style=3D"margin:0;font-size:14px;mso-line-height-alt:16.8px">
+<span style=3D"font-size:12px;">Availability of the Wirex services and Wire=
+x entity you receive services from depends on your location. Your location =
+and Wirex entity providing services may affect your rights and protections;=
+ therefore, please read the terms and conditions that apply to you carefull=
+y. If you have questions regarding the Wirex entity you receive services fr=
+om, please reach out to us via the in-app chat in the Wirex app.</span><br>=
+<span style=3D"font-size:12px;">&nbsp;</span><br>
+<span style=3D"font-size:12px;">Wirex Limited whose registered office is 9t=
+h Floor 107 Cheapside, London, United Kingdom, EC2V 6DN is authorised by th=
+e Financial Conduct Authority (FRN: 902025) under the Electronic Money Regu=
+lations 2017 for issuing electronic money and providing payment services. U=
+AB Wirex whose registered office is Perk=C5=ABnkiemio g. 13 =E2=80=93 91, V=
+ilnius, Lithuania provides fiat currency services through its partners with=
+ regulatory approvals. However, no deposit insurance or protection schemes =
+apply to services provided by UAB Wirex. Wirex &nbsp;Pte Ltd (CRN 201731976=
+E) whose registered office is 36 Robinson Road, #02-106, Singapore 068877 i=
+s subject to the Payments Services Act 2019 and is currently operating unde=
+r an exemption while its application is being reviewed by the Monetary Auth=
+ority of Singapore. Wirex Digital d.o.o (CRN 78679748084) is registered as =
+a Virtual Asset Service Provider (VASP) with the Croatian Financial Service=
+s Supervisory Agency (HANFA) and provides crypto asset services. Wirex USA =
+Inc. (CRN 6805163), whose registered office is 8 The Green, Ste A, Dover, D=
+elaware, 19901, provides services through its partners with regulatory appr=
+ovals.</span>
+<br><span style=3D"font-size:12px;">&nbsp;</span><br>
+<span style=3D"font-size:12px;">Wirex=E2=80=99s cryptoasset services are no=
+t regulated by FCA, Bank of Lithuania or Dutch National Bank. Due to the po=
+tential volatility of the cryptoasset markets, the value of your assets may=
+ fall significantly and lead to a total loss, and you should invest at your=
+ own risk. Tax may be payable on profits. You may be unable to access Finan=
+cial Ombudsman Scheme or other regulated complaint procedures for your comp=
+laints arising from Wirex=E2=80=99s cryptoasset services. You access Wirex=
+=E2=80=99s cryptoasset services on your own initiative and without solicita=
+tion from any other Wirex entity.&nbsp;</span>
+</p>
+<p style=3D"margin:0;font-size:14px;mso-line-height-alt:16.8px">&nbsp;</p>
+<p style=3D"margin:0;font-size:14px;text-align:right;mso-line-height-alt:16=
+.8px"><span style=3D"font-size:12px;"><a href=3D"http://ablinks.mail.wirexa=
+pp.com/ls/click?upn=3DNNfDklBYPW4P8QwJoaOnY585AuWK8wANdMYxXoYxuEPYWtJDTxc7k=
+KVjrCGOim0fOxllpL9yum4IU9XlEMMp6OrfWzYZ5mu-2BWayjZ41Tbile5n8iH8FGN3NNeeC9ye=
+Ir-2Br5Q2JiFwq3FfB5ND-2BaLWTo1umRAoAYNWihpOeQuGdYLdLoBiMQiwvcyyjRlSeXI3RXW2=
+-2BB10x9IdXRNPjttprOxkqKfsPjLQtbD6nlq2Nvf0ajH-2F-2FI6d-2BqLNXWND-2F1kibY5g5=
+MpxIdRLrve9LgWLjBbCPJi6acmUYCN-2Fa7fgDTs95HPbOg6QgXaKlMhumN6w7Oruuo9JWZgIWe=
+upKDb4H-2B-2BoOUnDQDQoB-2BGkDd5bKNjyMgGYmTovHFIAQlcgTjiQSSuc-2FEt9iTkfTH44E=
+br64ipJU5FGE3eF-2FQH-2BBWoVLY48PdODfMbxZnJqKSFvjE5OuHTBB-2BguinXeZFb5Y9A8Ek=
+DKY8vH4Ou30AeOXj1Kr8Ld3qKaP9sVWOWlXs28c7I8hh3Digvw8AhwTOEnrKvsg8UWKg-2FbLKB=
+YE4P-2BKXn8YwOPxYLO9rLaeZPM-2Bub3iIIoDMUWnZgMzS789pHrJyaYHF8DFV5FAKt77Lr2Tl=
+AaSklwV-2FFfltMxwzF-2FHzVpdQdLVVbbQ377Yg-2BVY5IoK0YEJMtKs2kaL5Q63zgmiEd-2Bk=
+OC3gDkL3SMiIFaEXB6vYxvUlW6_zbK357ad4ey2QVTI4CiUwp7tMIqYpbG-2FAy4wmC1SNelmWG=
+adlVWoa1WPzSlyv8GZSZ4DutQrLFNsr2MHLXWMCB1KqfpG5kXiYmyJl6WIG-2FBJmQlFdQ0ELAC=
+XuDmC4csi7HZb72NdGWd6gnKciahafSh7smmKrxD4dYw0Mk6Fo1krlUxS5aMCkazqN-2B8qvBLR=
+eYIHwZmMuxzn9I3NNs7632Y3tHwgj571X-2FwNgWjfdfV-2Bjkn-2BIfaZkYvn7g2jQkZu2S92u=
+8ww1Ds0Bcf3FJXBpXevpiNz-2FgeKVWX4u4szG0iTGy470qWea1ZW7rm6M12rmgU8iVqaNwG7Nv=
+whuPMv8dERe1i8fxHh-2FDREQ5TqdRUad11H2txkbVdvbN1R3svZPiuqUTIGYb9jsGrQnTolYMl=
+6z-2F-2B1QAS9Oc8arzROyKQlK6lo6Mq4QnMi60V0RwFImqF0NROnGxEr1BKCkrwgzPK-2BYNAZ=
+y5MMWR3jPhyq44sjBwWQA8VR8wsK-2Fw0nkIMjjOLmAD4hutmXM-2BnZRBf-2F7DvkhhWYwAPSo=
+ebBBO7uK3jLCHhihfZlZzgixaqsX0t-2FFv-2Bzn0l91lrIEKOdDpJeHnSBThBVdaiwc50hrHhH=
+vgkepmJR1LJpgsMJfG-2BR1YjtJjtENVnOF-2Ftst6wRAr7aGA8BMKfbzcVGswn5lI4AbiwX7O7=
+IepcqcHWdxUVvQYNeu8i3CGqvnkp3-2FpaVlQrznIj5EhtHbGK6D6H7UIZWFPA-3D" target=
+=3D"_blank" rel=3D"noopener" style=3D"text-decoration: underline; color: #8=
+2827f;">Unsubscribe</a></span></p>
+</div></div></td></tr></table>
+</td></tr></tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+<!-- End --></code>&nbsp;</p></div></td></tr></table></td></tr></tbody></ta=
+ble></td></tr></tbody></table></td></tr></tbody></table><!-- End --><img sr=
+c=3D"http://ablinks.mail.wirexapp.com/wf/open?upn=3DiDBXtfP0CwAsXV6AATIdKLl=
+YslkuZkFZsOSbDw8rK3-2FuTApy9WdP-2Fm-2FB-2BC9-2BTfuKWFVRqHCXt7RLfQB2rXKzYvT9=
+-2BAFP-2B5W5Q4-2BD3TA-2F0OnqIGHXW35UupIuGPpXjll7lofxf3ioo0JDomMpm-2BdzGs-2B=
+iQAXVHpOdkgyr5P2ohfgrJT2NofWDOo8WPCAjrbfTkHKT-2F935ot-2BfNQwRWNTEC8cOW0mn7a=
+ILbgX9d3Z4lI2G3j7B1MM606NU-2BpoASeRcWXMn1OJb9YJE6Viyx3jkmRtbrOPFH6fluB8oSCv=
+DS8MazqPrSnIYfIsO1E-2F3PLRtEsuq8hF2KLBhOLTTQHfcGOklgQ2KGBjQt69JfwvrCQa4zfog=
+4YOYUJIokYesiUvfiQ4uLCsFd4B17DuTOmgm2Et1khgxTuBCVl6aLm5HpuLitbZMWttenvHEBpz=
+z5o0dTuyJI4LLy5o4eTSCHMO367YZc2G49y7s63D550LiLdgLOpxB-2Bleyv0ILK5SauXB-2Fg0=
+PXDesdEfFYt-2B1-2B-2B8g4tpBel5rqkcKPcWc4pVuW30zGy2YkPEohe5nEYpLdXKGtgxkewLb=
+qkwt4YPWdZe-2FS5Cwvhy8y8PRjyZ-2BBCtK-2BqB2n7ha19c7OzuC7uiSmKMEx568-2B7Qz81Q=
+wHhu2HsHsFONgNd9ESONei55zVeP0tO18jcOryZUMHqtON3R49gnasSZNc6IivuXtGU9TWkrOH3=
+qJBlGqAZyNTIxx2ZSnrAVGPoI35meK6xJ6hChO2yl1T" alt=3D"" width=3D"1" height=3D=
+"1" border=3D"0" style=3D"height:1px !important;width:1px !important;border=
+-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;marg=
+in-right:0 !important;margin-left:0 !important;padding-top:0 !important;pad=
+ding-bottom:0 !important;padding-right:0 !important;padding-left:0 !importa=
+nt;"/></body></html>
+--30020cd782d8d553ecf715cf853b708c2cbf8f806b9dd7fdc274d434c005--
